@@ -1,0 +1,92 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  AgroVision AI — "Ship It" foundation stack (First Commit hackathon, AWS track).
+  Backend runs on ECS Express Mode (App Runner is closed to new customers as of
+  April 2026). Frontend is hosted on Vercel — this stack only covers what the
+  backend needs: one S3 bucket (scan/field data, uploads, model weights) and
+  the IAM role the ECS task assumes to read/write it.
+
+Parameters:
+  ProjectName:
+    Type: String
+    Default: agrovision
+    Description: Used as a prefix for resource names (must be globally unique for S3).
+
+Resources:
+  # Where your Docker image gets pushed to and ECS pulls it from
+  BackendRepo:
+    Type: AWS::ECR::Repository
+    Properties:
+      RepositoryName: !Sub "${ProjectName}-backend"
+      ImageScanningConfiguration:
+        ScanOnPush: true
+
+  # Backend data lives here under three prefixes: data/, models/, uploads/
+  AppBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "${ProjectName}-app-${AWS::AccountId}"
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: false
+        BlockPublicPolicy: false
+        IgnorePublicAcls: false
+        RestrictPublicBuckets: false
+      CorsConfiguration:
+        CorsRules:
+          - AllowedMethods: [GET]
+            AllowedOrigins: ["*"]
+            AllowedHeaders: ["*"]
+
+  # uploads/* is public-read so the frontend can show scan photos directly from
+  # S3 without a second CDN. data/* and models/* stay private.
+  AppBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref AppBucket
+      PolicyDocument:
+        Statement:
+          - Sid: PublicReadUploads
+            Effect: Allow
+            Principal: "*"
+            Action: s3:GetObject
+            Resource: !Sub "${AppBucket.Arn}/uploads/*"
+
+  # The ECS "task role" — this is what your Flask app assumes via boto3 at
+  # runtime to read/write the bucket. In the Express Mode console this goes
+  # under Additional configurations -> Task role (NOT the task execution role,
+  # which is a separate AWS-managed one that just pulls the image and writes logs).
+  EcsTaskRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub "${ProjectName}-ecs-task-role"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: ecs-tasks.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: AppBucketAccess
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                  - s3:PutObject
+                  - s3:ListBucket
+                Resource:
+                  - !GetAtt AppBucket.Arn
+                  - !Sub "${AppBucket.Arn}/*"
+
+Outputs:
+  BackendRepoUri:
+    Value: !GetAtt BackendRepo.RepositoryUri
+    Description: Push your Docker image here, then use this URI (plus :latest) as the Image URI in ECS Express Mode
+  AppBucketName:
+    Value: !Ref AppBucket
+    Description: Set as S3_DATA_BUCKET, S3_UPLOADS_BUCKET, and MODELS_S3_BUCKET in the ECS service's env vars
+  EcsTaskRoleArn:
+    Value: !GetAtt EcsTaskRole.Arn
+    Description: Select this as the Task role in ECS Express Mode's Additional configurations

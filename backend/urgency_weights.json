@@ -1,0 +1,31 @@
+{
+  "weights": {
+    "severity": 0.25,
+    "severity_day7": 0.2,
+    "composite_risk_enc": 0.13,
+    "geo_risk_enc": 0.12,
+    "outbreak_class_enc": 0.1,
+    "spread_velocity": 0.1,
+    "geo_momentum": 0.05,
+    "treatment_ineffectiveness": 0.05
+  },
+  "bands": {
+    "Preventive": [
+      0,
+      20
+    ],
+    "Standard": [
+      20,
+      45
+    ],
+    "Urgent": [
+      45,
+      70
+    ],
+    "Emergency": [
+      70,
+      100
+    ]
+  },
+  "schema_version": 1
+}

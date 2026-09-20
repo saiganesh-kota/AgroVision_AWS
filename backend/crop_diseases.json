@@ -1,0 +1,141 @@
+{
+  "crop_profiles": {
+    "apple": [
+      {
+        "name": "Apple scab",
+        "raw_label": "Apple___Apple_scab",
+        "weather_class": "fungal_blight",
+        "pathogen_type": "fungal"
+      },
+      {
+        "name": "Black rot",
+        "raw_label": "Apple___Black_rot",
+        "weather_class": "fungal_blight",
+        "pathogen_type": "fungal"
+      },
+      {
+        "name": "Cedar apple rust",
+        "raw_label": "Apple___Cedar_apple_rust",
+        "weather_class": "rust",
+        "pathogen_type": "fungal"
+      },
+      {
+        "name": "Healthy",
+        "raw_label": "Apple___healthy",
+        "weather_class": "fungal_blight",
+        "pathogen_type": "none"
+      }
+    ],
+    "corn": [
+      {
+        "name": "Cercospora leaf spot Gray leaf spot",
+        "raw_label": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+        "weather_class": "fungal_blight",
+        "pathogen_type": "fungal"
+      },
+      {
+        "name": "Common rust",
+        "raw_label": "Corn_(maize)___Common_rust_",
+        "weather_class": "rust",
+        "pathogen_type": "fungal"
+      },
+      {
+        "name": "Northern Leaf Blight",
+        "raw_label": "Corn_(maize)___Northern_Leaf_Blight",
+        "weather_class": "fungal_blight",
+        "pathogen_type": "fungal"
+      },
+      {
+        "name": "Healthy",
+        "raw_label": "Corn_(maize)___healthy",
+        "weather_class": "fungal_blight",
+        "pathogen_type": "none"
+      }
+    ],
+    "grape": [
+      {
+        "name": "Black rot",
+        "raw_label": "Grape___Black_rot",
+        "weather_class": "fungal_blight",
+        "pathogen_type": "fungal"
+      },
+      {
+        "name": "Esca (Black Measles)",
+        "raw_label": "Grape___Esca_(Black_Measles)",
+        "weather_class": "trunk_disease",
+        "pathogen_type": "fungal (trunk disease complex)"
+      },
+      {
+        "name": "Leaf blight (Isariopsis Leaf Spot)",
+        "raw_label": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+        "weather_class": "fungal_blight",
+        "pathogen_type": "fungal"
+      },
+      {
+        "name": "Healthy",
+        "raw_label": "Grape___healthy",
+        "weather_class": "fungal_blight",
+        "pathogen_type": "none"
+      }
+    ],
+    "potato": [
+      {
+        "name": "Early blight",
+        "raw_label": "Potato___Early_blight",
+        "weather_class": "fungal_blight",
+        "pathogen_type": "fungal"
+      },
+      {
+        "name": "Late blight",
+        "raw_label": "Potato___Late_blight",
+        "weather_class": "late_blight_oomycete",
+        "pathogen_type": "oomycete (fungal-like)"
+      },
+      {
+        "name": "Healthy",
+        "raw_label": "Potato___healthy",
+        "weather_class": "fungal_blight",
+        "pathogen_type": "none"
+      }
+    ],
+    "tomato": [
+      {
+        "name": "Bacterial spot",
+        "raw_label": "Tomato___Bacterial_spot",
+        "weather_class": "bacterial_spot",
+        "pathogen_type": "bacterial"
+      },
+      {
+        "name": "Early blight",
+        "raw_label": "Tomato___Early_blight",
+        "weather_class": "fungal_blight",
+        "pathogen_type": "fungal"
+      },
+      {
+        "name": "Late blight",
+        "raw_label": "Tomato___Late_blight",
+        "weather_class": "late_blight_oomycete",
+        "pathogen_type": "oomycete (fungal-like)"
+      },
+      {
+        "name": "Leaf Mold",
+        "raw_label": "Tomato___Leaf_Mold",
+        "weather_class": "leaf_mold",
+        "pathogen_type": "fungal"
+      },
+      {
+        "name": "Healthy",
+        "raw_label": "Tomato___healthy",
+        "weather_class": "fungal_blight",
+        "pathogen_type": "none"
+      }
+    ]
+  },
+  "generic_diseases": [
+    {
+      "name": "Unknown",
+      "weather_class": "fungal_blight",
+      "pathogen_type": "unknown"
+    }
+  ]
+}

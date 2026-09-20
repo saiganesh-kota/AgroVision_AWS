@@ -1,0 +1,52 @@
+{
+  "models": {
+    "fungal_blight": {
+      "temp_range": [
+        20,
+        27
+      ],
+      "rh_threshold": 85,
+      "description": "Warm, humid conditions favour most foliar fungal blights"
+    },
+    "rust": {
+      "temp_range": [
+        15,
+        22
+      ],
+      "rh_threshold": 80,
+      "description": "Cool, humid conditions with leaf wetness favour rust spore germination"
+    },
+    "bacterial_spot": {
+      "temp_range": [
+        24,
+        30
+      ],
+      "rh_threshold": 85,
+      "description": "Warm, wet, splashing conditions spread bacterial pathogens rapidly"
+    },
+    "late_blight_oomycete": {
+      "temp_range": [
+        12,
+        20
+      ],
+      "rh_threshold": 90,
+      "description": "Cool, very humid/wet conditions are ideal for Phytophthora infestans"
+    },
+    "leaf_mold": {
+      "temp_range": [
+        20,
+        25
+      ],
+      "rh_threshold": 85,
+      "description": "High humidity in enclosed/greenhouse conditions favours leaf mold"
+    },
+    "trunk_disease": {
+      "temp_range": [
+        0,
+        45
+      ],
+      "rh_threshold": 0,
+      "description": "Trunk diseases are wound-driven, not strongly weather-triggered"
+    }
+  }
+}

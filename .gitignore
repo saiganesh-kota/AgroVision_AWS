@@ -1,0 +1,47 @@
+# ── Python ────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.so
+venv/
+env/
+.venv/
+.env
+*.log
+
+# ── ML Models (large files) ───────────────────────────
+backend/models/*.keras
+backend/models/*.h5
+backend/models/*.pkl
+backend/models/*.joblib
+backend/models/versions/
+
+# ── Uploaded images ───────────────────────────────────
+backend/uploads/
+
+# ── Database / scan history ───────────────────────────
+backend/scans_db.json
+backend/scans.json
+backend/feedback_data.csv
+backend/retrain.log
+
+# ── Node / React ──────────────────────────────────────
+node_modules/
+frontend/dist/
+frontend/.env
+
+# ── OS ────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# ── IDE ───────────────────────────────────────────────
+.vscode/
+.idea/
+*.iml

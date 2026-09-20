@@ -1,0 +1,788 @@
+{
+  "schema_version": 2,
+  "encoding": "urgency_class x disease_band x soil_class",
+  "actions": [
+    "fungicide",
+    "bactericide",
+    "soil_fix",
+    "ph_correction",
+    "irrigation",
+    "monitor"
+  ],
+  "state_space_size": 48,
+  "q_values": {
+    "u0_d0_s0": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u0_d0_s1": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u0_d0_s2": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u0_d1_s0": {
+      "fungicide": 0.0,
+      "bactericide": 1.2,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u0_d1_s1": {
+      "fungicide": 0.0,
+      "bactericide": 2.256,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": -0.12
+    },
+    "u0_d1_s2": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u0_d2_s0": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u0_d2_s1": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u0_d2_s2": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u0_d3_s0": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u0_d3_s1": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u0_d3_s2": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u1_d0_s0": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u1_d0_s1": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u1_d0_s2": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u1_d1_s0": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 1.2,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u1_d1_s1": {
+      "fungicide": 3.031386,
+      "bactericide": 8.861834,
+      "soil_fix": 5.746508,
+      "ph_correction": 4.09146,
+      "irrigation": 2.736308,
+      "monitor": 5.815163
+    },
+    "u1_d1_s2": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 3.18528
+    },
+    "u1_d2_s0": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u1_d2_s1": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u1_d2_s2": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u1_d3_s0": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u1_d3_s1": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 1.2
+    },
+    "u1_d3_s2": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u2_d0_s0": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u2_d0_s1": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u2_d0_s2": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u2_d1_s0": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u2_d1_s1": {
+      "fungicide": 4.72268,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 1.2
+    },
+    "u2_d1_s2": {
+      "fungicide": 1.2,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u2_d2_s0": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u2_d2_s1": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u2_d2_s2": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u2_d3_s0": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u2_d3_s1": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u2_d3_s2": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u3_d0_s0": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u3_d0_s1": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u3_d0_s2": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u3_d1_s0": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u3_d1_s1": {
+      "fungicide": 1.234406,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u3_d1_s2": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u3_d2_s0": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u3_d2_s1": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u3_d2_s2": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u3_d3_s0": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u3_d3_s1": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    },
+    "u3_d3_s2": {
+      "fungicide": 0.0,
+      "bactericide": 0.0,
+      "soil_fix": 0.0,
+      "ph_correction": 0.0,
+      "irrigation": 0.0,
+      "monitor": 0.0
+    }
+  },
+  "visit_counts": {
+    "u0_d0_s0": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u0_d0_s1": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u0_d0_s2": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u0_d1_s0": {
+      "fungicide": 0,
+      "bactericide": 1,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u0_d1_s1": {
+      "fungicide": 0,
+      "bactericide": 2,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u0_d1_s2": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u0_d2_s0": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u0_d2_s1": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u0_d2_s2": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u0_d3_s0": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u0_d3_s1": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u0_d3_s2": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u1_d0_s0": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u1_d0_s1": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u1_d0_s2": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u1_d1_s0": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 1,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u1_d1_s1": {
+      "fungicide": 1,
+      "bactericide": 17,
+      "soil_fix": 5,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 7
+    },
+    "u1_d1_s2": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 3
+    },
+    "u1_d2_s0": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u1_d2_s1": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u1_d2_s2": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u1_d3_s0": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u1_d3_s1": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 1
+    },
+    "u1_d3_s2": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u2_d0_s0": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u2_d0_s1": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u2_d0_s2": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u2_d1_s0": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u2_d1_s1": {
+      "fungicide": 5,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 1
+    },
+    "u2_d1_s2": {
+      "fungicide": 1,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u2_d2_s0": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u2_d2_s1": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u2_d2_s2": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u2_d3_s0": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u2_d3_s1": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u2_d3_s2": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u3_d0_s0": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u3_d0_s1": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u3_d0_s2": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u3_d1_s0": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u3_d1_s1": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u3_d1_s2": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u3_d2_s0": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u3_d2_s1": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u3_d2_s2": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u3_d3_s0": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u3_d3_s1": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    },
+    "u3_d3_s2": {
+      "fungicide": 0,
+      "bactericide": 0,
+      "soil_fix": 0,
+      "ph_correction": 0,
+      "irrigation": 0,
+      "monitor": 0
+    }
+  },
+  "total_updates": 45,
+  "last_updated": "2026-08-25T19:30:04.013280",
+  "migration_note": "v1 states migrated to v2 format; learned values preserved with 0.5x decay"
+}

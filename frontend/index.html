@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgroVision AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script>
+      (function(){var t=localStorage.getItem('agrovision_theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();
+    </script>
+    <style>
+      /* Forcefully hide Google Translate top banner and popups */
+      .goog-te-banner-frame.skiptranslate, iframe.goog-te-banner-frame { display: none !important; }
+      body { top: 0px !important; position: static !important; margin-top: 0px !important; padding-top: 0px !important; }
+      html { top: 0px !important; position: static !important; height: 100% !important; margin-top: 0px !important; padding-top: 0px !important; }
+      .goog-tooltip, #goog-gt-tt { display: none !important; }
+      .goog-text-highlight { background-color: transparent !important; border: none !important; box-shadow: none !important; }
+      .VIpgJd-Zvi9od-ORHb-OEVmcd { display: none !important; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="google_translate_element" style="display:none;"></div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

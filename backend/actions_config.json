@@ -1,0 +1,47 @@
+{
+  "actions": [
+    "fungicide",
+    "bactericide",
+    "soil_fix",
+    "ph_correction",
+    "irrigation",
+    "monitor"
+  ],
+  "rl_hyperparams": {
+    "epsilon": 0.2,
+    "alpha": 0.12,
+    "gamma": 0.85
+  },
+  "meta": {
+    "fungicide": {
+      "name": "Fungicide Spray",
+      "type": "Chemical",
+      "cost_inr": 240
+    },
+    "bactericide": {
+      "name": "Bactericide Spray",
+      "type": "Chemical",
+      "cost_inr": 280
+    },
+    "soil_fix": {
+      "name": "Soil Improvement",
+      "type": "Organic",
+      "cost_inr": 180
+    },
+    "ph_correction": {
+      "name": "pH Adjustment",
+      "type": "Organic",
+      "cost_inr": 150
+    },
+    "irrigation": {
+      "name": "Water Management",
+      "type": "Organic",
+      "cost_inr": 120
+    },
+    "monitor": {
+      "name": "Monitoring",
+      "type": "None",
+      "cost_inr": 60
+    }
+  }
+}
