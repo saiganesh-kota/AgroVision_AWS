@@ -7,6 +7,8 @@
 [![Deploy](https://img.shields.io/badge/deploy-ECS%20Fargate%20%2B%20Vercel-orange)]()
 [![License](https://img.shields.io/badge/status-hackathon%20build-brightgreen)]()
 
+**🎥 [Watch the 3-minute demo video](https://drive.google.com/file/d/18zfw9TGjfwfphwA0XvSBJExk40uRvzwl/view?usp=drivesdk)**
+
 ---
 
 ## 📐 Architecture
