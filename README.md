@@ -1,6 +1,6 @@
 # 🌾 AgroVision AI v3 — Intelligent Crop Disease Detection Platform
 
-> AI-powered crop diagnosis, treatment recommendations, farm intelligence, and government-scheme discovery — deployed live on AWS.
+# AI-powered crop diagnosis, treatment recommendations, farm intelligence, and government-scheme discovery — deployed live on AWS.
 
 [![Backend](https://img.shields.io/badge/backend-Flask%20%2B%20Python-3776AB)]()
 [![Frontend](https://img.shields.io/badge/frontend-React%20%2B%20Vite-61DAFB)]()
